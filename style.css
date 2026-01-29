@@ -1,0 +1,831 @@
+/* Allgemein */
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d6bfa8; /* sanft bräunlich */
+  color: #4b3b2b; /* dunkelbraun für Text */
+  line-height: 1.6;
+}
+
+/* Menü */
+nav {
+  background-color: #8b6d5c; /* dunkler Braunton */
+  padding: 15px 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #ffffff; /* Weiß für guten Kontrast */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  color: #f0d8b0; /* helles Braun beim Hover */
+}
+
+/* Startbereich */
+.section-start {
+  background-image: url('bilder/meinbild.jpg'); /* Dein Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 250px 20px; /* mehr Platz für große Überschrift */
+  text-align: center;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.section-start h1 {
+  font-size: 4em; /* sehr große Überschrift */
+  margin-top: 250px;   /* schiebt die Überschrift 250px nach unten */
+  margin-bottom: 20px;
+}
+
+.section-start p {
+  font-size: 1.5em; /* Unterüberschrift */
+}
+
+/* Abschnitte / Textboxen */
+section {
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 20px;
+  background-color: #f0e0d6; /* sanft hellbraun */
+}
+
+h1, h2 {
+  font-family: 'Georgia', serif;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* Untermenü – Seite "Meine Ausbildungen" */
+.submenu {
+  background-color: #f0e0d6; /* hellbrauner Hintergrund */
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.submenu a {
+  margin: 0 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4b3b2b;
+}
+
+.submenu a:hover {
+  color: #8b6d5c; /* dunkler Braunton beim Hover */
+}
+
+
+/* Layout für Ausbildungsblöcke */
+.ausbildung-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.ausbildung-block img {
+  max-width: 250px;
+  border-radius: 15px;
+}
+
+.ausbildung-block div {
+  flex: 1;
+}
+/* Kontaktseite */
+.kontakt-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.kontakt-block img {
+  max-width: 150px;   /* deutlich kleiner als bisher */
+  border-radius: 12px;
+}
+
+.kontakt-block a {
+  color: #4b3b2b; /* dunkelbraun */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kontakt-block a:hover {
+  color: #8b6d5c; /* Braun beim Hover */
+}
+/* --- Responsive Design für Handy / kleine Bildschirme --- */
+@media (max-width: 768px) {
+  
+  /* Allgemeiner Text etwas kleiner */
+  body {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+
+  /* Überschriften anpassen */
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+
+  /* Menü enger */
+  nav a {
+    display: block;       /* Links untereinander */
+    margin: 8px 0;
+    font-size: 1em;
+  }
+
+  /* Kontakt-Block untereinander statt nebeneinander */
+  .kontakt-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .kontakt-block img {
+    max-width: 200px; /* auf Handy darf Bild wieder größer wirken */
+    margin-top: 15px;
+  }
+
+  /* Ausbildungsblöcke (Text + Bild) untereinander */
+  .ausbildung-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ausbildung-block img {
+    max-width: 250px;
+    margin-bottom: 15px;
+  }
+}
+/* --- Hamburger Menü --- */
+.navbar {
+  background-color: #8b6d5c;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- Responsive: auf Handy umschalten --- */
+@media (max-width: 768px) {
+  .navbar .menu {
+    display: none; /* Menü zuerst verstecken */
+    flex-direction: column;
+    background-color: #8b6d5c;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navbar .menu.show {
+    display: flex; /* Menü sichtbar wenn "show" aktiv */
+  }
+
+  .navbar .menu-toggle {
+    display: block; /* Hamburger-Button sichtbar */
+  }
+}
+/* Kontaktseite zentriert und größer */
+.kontakt-section {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.kontakt-section h1 {
+  font-size: 2.8em;   /* größere Überschrift */
+  margin-bottom: 30px;
+  color: #4b3b2b;     /* dunkles Braun */
+}
+
+.kontakt-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* für Handy untereinander */
+}
+
+.kontakt-text {
+  font-size: 1.3em;   /* Text etwas größer */
+  line-height: 1.6;
+}
+
+.kontakt-block img {
+  max-width: 300px;   /* größer als vorher */
+  border-radius: 15px;
+}
+
+.kontakt-block a {
+  color: #4b3b2b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kontakt-block a:hover {
+  color: #8b6d5c;
+}
+/* =======================
+   Angebote-Seite
+   ======================= */
+
+/* Angebote Layout */
+.angebote-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* sorgt dafür, dass es auf kleineren Bildschirmen umbricht */
+}
+
+.angebote-text {
+  flex: 2; /* Text nimmt mehr Platz ein */
+}
+
+.angebote-bild {
+  flex: 1;
+  display: block;
+  text-align: center;
+}
+
+.angebote-bild img {
+  display: block;
+  max-width: 300px; /* Bildgröße */
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+/* Handy-Ansicht */
+@media (max-width: 768px) {
+  .angebote-content {
+    flex-direction: column; /* Text und Bilder untereinander */
+  }
+  .angebote-bild img {
+    max-width: 100%; /* Bilder nutzen volle Breite am Handy */
+  }
+}
+
+/* Preise Layout */
+.preise-content {
+  display: flex;
+  align-items: center; /* Bild wird mittig zum Text ausgerichtet */
+  gap: 40px;
+  flex-wrap: wrap; /* bricht bei kleinen Bildschirmen um */
+}
+
+.preise-text {
+  flex: 2; /* Text nimmt mehr Platz ein */
+}
+
+.preise-bild {
+  flex: 1;
+  text-align: center;
+}
+
+.preise-bild img {
+  max-width: 500px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Handy-Ansicht */
+@media (max-width: 768px) {
+  .preise-content {
+    flex-direction: column; /* Text und Bild untereinander */
+    text-align: center;
+  }
+  .preise-bild img {
+    max-width: 100%;
+  }
+}
+/* Layout für H3-Abschnitte */
+.unterpunkt {
+  display: flex;
+  align-items: flex-start; /* Text oben ausgerichtet */
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* für Handy */
+}
+
+.unterpunkt-text {
+  flex: 2;
+}
+
+.unterpunkt-bild {
+  flex: 1;
+  text-align: center;
+}
+
+.unterpunkt-bild img {
+  max-width: 250px; /* Bildgröße anpassen */
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Handy-Ansicht */
+@media (max-width: 768px) {
+  .unterpunkt {
+    flex-direction: column; /* Text und Bild untereinander */
+    text-align: center;
+  }
+  .unterpunkt-bild img {
+    max-width: 100%;
+  }
+}
+.submenu {
+  display: flex;
+  flex-direction: column; /* Links untereinander */
+  gap: 8px; /* Abstand zwischen den Links */
+  margin: 20px 0;
+}
+
+.submenu a {
+  text-decoration: none;
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.submenu a:hover {
+  background: #ddd;
+}
+/* --- Überschrift mit Hintergrundbild --- */
+.section-header {
+  background: url('bilder/header-pferd.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+  color: black;
+}
+
+.section-header h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+/* --- Zitat-Block --- */
+.zitat {
+  text-align: center;
+  margin: 60px auto;
+  padding: 30px;
+  max-width: 800px;
+}
+
+.zitat blockquote {
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.6;
+  border-left: 4px solid #999;
+  padding-left: 20px;
+  color: #333;
+}
+
+/* --- Hervorgehobener Textblock --- */
+.highlight-text {
+  background-color: #f8f4ec; /* sanftes Beige, kannst du ändern */
+  border-left: 5px solid #c5a880;
+  padding: 40px 60px;
+  margin: 50px auto;
+  max-width: 900px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+/* --- Text-Bild-Block --- */
+.text-bild-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+.text-bild-block img {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.text-bild-block div {
+  width: 50%;
+}
+
+.text-bild-block h2 {
+  margin-top: 0;
+}
+
+.text-bild-block p {
+  line-height: 1.6;
+}
+
+/* --- Mobile Ansicht --- */
+@media (max-width: 768px) {
+  .text-bild-block {
+    flex-direction: column;
+  }
+
+  .text-bild-block img,
+  .text-bild-block div {
+    width: 100%;
+  }
+
+  .section-header {
+    padding: 60px 20px;
+  }
+
+  .section-header h1 {
+    font-size: 40px;
+  }
+
+  .section-header p {
+    font-size: 18px;
+  }
+}
+
+.hauptsaeulen {
+  margin: 60px auto;
+  max-width: 1100px;
+}
+
+.hauptsaeulen-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Text | Bild */
+  gap: 30px 40px;
+  align-items: start;
+}
+
+/* Titel über volle Breite */
+.haupttitel {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.saeule-text h3 {
+  margin-top: 0;
+}
+
+/* Bilder */
+.hauptsaeulen-grid img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* 📱 Handy */
+@media (max-width: 768px) {
+  .hauptsaeulen-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hauptsaeulen-grid img {
+    margin: 0 auto 30px;
+  }
+}
+
+
+.zitat-barock {
+  position: relative;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 50px 30px;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.7;
+  color: inherit;
+}
+
+/* Gemeinsame Basis für oben & unten */
+.zitat-barock::before,
+.zitat-barock::after {
+  content: "";
+  display: block;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 30px 0;
+}
+
+/* Oberer Barock-Schnörkel */
+.zitat-barock::before {
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 60'>\
+<path d='M20 30 \
+C80 5, 160 5, 220 30 \
+S360 55, 420 30 \
+S520 5, 580 30' \
+stroke='%237a4a2e' stroke-width='2.5' fill='none'/>\
+<path d='M300 10 \
+C280 30, 280 30, 300 50 \
+C320 30, 320 30, 300 10' \
+stroke='%237a4a2e' stroke-width='2' fill='none'/>\
+</svg>");
+}
+
+/* Unterer Barock-Schnörkel (gespiegelt) */
+.zitat-barock::after {
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 60'>\
+<path d='M20 30 \
+C80 55, 160 55, 220 30 \
+S360 5, 420 30 \
+S520 55, 580 30' \
+stroke='%237a4a2e' stroke-width='2.5' fill='none'/>\
+<path d='M300 10 \
+C280 30, 280 30, 300 50 \
+C320 30, 320 30, 300 10' \
+stroke='%237a4a2e' stroke-width='2' fill='none'/>\
+</svg>");
+}
+
+/* 📱 Mobile Optimierung */
+@media (max-width: 600px) {
+  .zitat-barock {
+    padding: 35px 15px;
+    font-size: 0.95rem;
+  }
+
+  .zitat-barock::before,
+  .zitat-barock::after {
+    height: 40px;
+    margin: 20px 0;
+  }
+}
+/* Bild mit Text & Rahmen */
+.bild-mit-text {
+  position: relative;
+  max-width: 900px;              /* Bildgröße Desktop */
+  margin: 60px auto;             /* zentriert + Abstand */
+  border: 4px solid #7a4a2e;     /* Farbe wie h2 */
+  border-radius: 12px;
+  overflow: hidden;              /* Text bleibt im Bild */
+}
+
+.bild-mit-text img {
+  width: 100%;
+  display: block;
+}
+
+/* Text im Bild */
+.bild-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  padding: 15px 25px;
+
+  background: rgba(255, 255, 255, 0.85); /* gut lesbar */
+  color: #000;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+
+  border-radius: 8px;
+}
+
+/* 📱 Mobile Optimierung */
+@media (max-width: 768px) {
+  .bild-mit-text {
+    max-width: 95%;
+    margin: 40px auto;
+  }
+
+  .bild-text {
+    font-size: 1rem;
+    padding: 12px 18px;
+    bottom: 12px;
+  }
+}
+.bild-text {
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.bild-text {
+  background: rgba(0,0,0,0.55);
+  color: white;
+}
+
+/* ===== HEADER STREIFEN Philosophie===== */
+body.seite-barock .header-streifen {
+  height: 280px;
+  background: url("bilder/header.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+body.seite-barock .header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body.seite-barock .header-overlay h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+body.seite-barock .header-overlay p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* ===== ZENTRIERTE TEXTE ===== */
+body.seite-barock .zentrierter-text {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ===== GROSSE BILDER ===== */
+body.seite-barock .grosses-bild {
+  max-width: 1100px;
+  margin: 60px auto;
+}
+
+body.seite-barock .grosses-bild img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ===== WECHSEL-ABSCHNITT ===== */
+body.seite-barock .wechsel-abschnitt {
+  max-width: 1100px;
+  margin: 80px auto;
+}
+
+body.seite-barock .wechsel-abschnitt h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+body.seite-barock .wechsel-block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+body.seite-barock .wechsel-block p {
+  flex: 1;
+  line-height: 1.6;
+}
+
+body.seite-barock .wechsel-block img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+/* LINKS / RECHTS */
+body.seite-barock .wechsel-block.links {
+  flex-direction: row;
+  text-align: left;
+}
+
+body.seite-barock .wechsel-block.rechts {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* LETZTER TEXT */
+body.seite-barock .abschluss-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto 0;
+  line-height: 1.6;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .header-overlay h1 {
+    font-size: 2rem;
+  }
+
+  body.seite-barock .wechsel-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body.seite-barock .wechsel-block img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.seite-barock section {
+  background-color: transparent;
+  margin: 60px auto;
+  padding: 40px 20px;
+}
+
+/* Philosophie-Seite: Abstand Text → Zitat verkleinern */
+.seite-barock .zentrierter-text {
+  margin-bottom: 20px;   /* vorher 50px */
+}
+
+.seite-barock .zitat-barock {
+  margin-top: 30px;      /* vorher 80px */
+}
+
+@media (max-width: 768px) {
+  .seite-barock .zentrierter-text {
+    margin-bottom: 15px;
+  }
+
+  .seite-barock .zitat-barock {
+    margin-top: 20px;
+  }
+}
+
+/* Philosophie-Seite: große Bilder kleiner & ruhiger */
+.seite-barock .grosses-bild {
+  max-width: 550px;   /* ca. halb so breit wie vorher */
+  margin: 40px auto;
+}
+
+@media (max-width: 768px) {
+  .seite-barock .grosses-bild {
+    max-width: 90%;
+  }
+}
+
+/* Philosophie-Seite: große Bilder kleiner (erzwingt Override) */
+body.seite-barock .grosses-bild {
+  max-width: 550px !important;
+  margin: 40px auto !important;
+}
+
+body.seite-barock .grosses-bild img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}

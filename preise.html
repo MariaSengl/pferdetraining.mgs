@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Preise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menü -->
+  <nav class="navbar">
+    <div class="logo">Pferdetraining</div>
+    <button class="menu-toggle">☰</button>
+    <div class="menu">
+ <a href="index.html">Home</a>
+      <a href="Delfin-Horsetraining.html">🐴🐬❤️</a>
+      <a href="ausbildungen.html">Meine Ausbildungen</a>
+      <a href="philosophie.html">Meine Philosophie</a>
+      <a href="angebote.html">Meine Angebote</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
+
+
+  <!-- Preise -->
+  <section class="preise-section">
+    <div class="preise-content">
+
+      <!-- Textbereich -->
+      <div class="preise-text">
+        <h1>Preise</h1>
+      <h2>Einzelcoachings vor Ort</h2>
+        <ul>
+          <li>45€ pro Stunde</li>
+          <li>ab 15km Entfernung Anfahrtskosten von 0,50€ pro km - bei mehreren Kunden auf einer Strecke/in einem Gebiet können die Anfahrtskosten natürlich geteilt werden.</li>
+        </ul>
+      <h2>Videocoaching</h2>
+        <ul>
+          <li>Live-Videocoaching: 40€ pro Stunde</li>
+          <li>Videoeinsendung:
+            <ul>
+            <li>kleinere Fragen/Themen: 40€</li>
+            <li>komplexere Fragen/Themen: 60€</li>
+            </ul>
+          </li>
+        </ul>
+      <h2>Trainingsvertretung</h2>
+        <ul>
+          <li>45€/h + 0,50€ pro km Anfahrt (ab 15km Entfernung von 8354 St. Anna am Aigen)<br>
+              22€ für jede weitere halbe Stunde<br>
+              gezahlt nach Gesamtzeit, die anfällt, um Pferd von Koppel zu holen, zu putzen, Training, Kraftfutter zu geben, etc.</li>
+      </div>
+
+      <!-- Bildbereich -->
+      <div class="preise-bild">
+        <img src="bilder/preise1.jpg" alt="Ich bei der Arbeit">
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript für Hamburger-Menü -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

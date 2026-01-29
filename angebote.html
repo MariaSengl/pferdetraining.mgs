@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Meine Angebote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- Menü -->
+  <nav class="navbar">
+    <div class="logo">Pferdetraining</div>
+    <button class="menu-toggle">☰</button>
+    <div class="menu">
+   <a href="index.html">Home</a>
+      <a href="Delfin-Horsetraining.html">🐴🐬❤️</a>
+      <a href="ausbildungen.html">Meine Ausbildungen</a>
+      <a href="philosophie.html">Meine Philosophie</a>
+      <a href="angebote.html">Meine Angebote</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
+
+
+  <!-- Angebote -->
+  <section class="angebote-section">
+    <div class="angebote-content">
+
+      <!-- Textbereich -->
+      <div class="angebote-text">
+        <h1>Meine Angebote</h1>
+
+        <h2>Einzelcoachings bei dir vor Ort</h2>
+        <p>
+        In einem Umkreis von 100km von 8354 St. Anna am Aigen aus, komme ich gerne zu dir und deinem Pferd vor Ort und coache euch in eurer gewohnten Umgebung. Hierbei biete ich Folgendes an: 
+        </p>
+        <ul>
+          <li>Delfin-Horsetraining Coachings</li>
+          <li>Coming soon: Gesundheitsförderndes Training in Gymnastik, Zirzensik und anderen kreativen Trainingsformen wie Trail & Co (wenn vor Ort vorhanden)</li>
+        </ul>
+
+        <h2>Videocoaching</h2>
+        <p>
+          Die heutige Technik macht es möglich, ortsunabhängig und über weite Entfernungen hinweg, 
+          Menschen mit ihren Pferden zu coachen. Hierbei biete ich 2 Varianten:
+        </p>
+        <ul>
+          <li>Live-Videocoaching: Ich bin direkt live über Videocall dabei, wenn du dein Pferd trainierst 
+          und kann mit dir über Kopfhörer kommunizieren. Dein Handy stellst du am Rand auf, sodass es dich 
+          mit deinem Pferd filmt – oder eine zweite Person kann dich filmen.</li>
+          <li>Videoeinsendung: Dieses Angebot umfasst ein telefonisches Vorgespräch, in dem du mir dein Thema/Problem/Anliegen schilderst. 
+              Daraufhin kann ich dir sagen, welche Informationen ich bräuchte und was am Video gezeigt werden sollte. Wenn du das Video aufgenommen und mit allen notwendigen 
+              Informationen eingesendet hast, werde ich mir alles anschauen, analysieren und Material vorbereiten, das wir dann in einem Videocall besprechen.
+              Der Umfang und Zeitaufwand variiert je nach Thema. Einfache Fragen zu Lektionen sind daher billiger als komplexere.(siehe <a href="preise.html">Preise</a>)</li>
+        </ul>
+
+        <h2>Trainingsvertretung</h2>
+        <p>
+          Gerne komme ich in den Stall zu deinem Pferd (im Umkreis von 100km von 8354 St. Anna am Aigen aus) und trainiere es in den Trainingsformen, die ich auch coache, 
+          wenn du keine/zu wenig Zeit hast oder gerade im Urlaub bist. 
+          Mindestens ein Coaching vor Ort muss aber schon stattgefunden haben, 
+          damit ich das Pferd im Vorhinein schon kenne und die Situation besser einschätzen kann.
+        </p>
+        <p>
+          Hier findest du die <a href="preise.html">Preise</a> zu meinen Angeboten. 
+        </p>
+        <p>
+        Für eine Terminvereinbarung melde dich gerne telefonisch oder via Email bei mir. (Siehe <a href="kontakt.html">Kontakt</a>) <br>
+        Ich freue mich auf dich und dein Pferd!
+        </p>
+      </div>
+
+      <!-- Bildbereich -->
+      <div class="angebote-bild">
+        <img src="bilder/angebote6.jpg" alt="Ich bei der Arbeit">
+        <img src="bilder/angebote2.jpg" alt="Coaching">
+        <img src="bilder/angebote1.jpg" alt="Zirzensik">
+        <img src="bilder/angebote5.jpg" alt="Gymnastik">
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript für Hamburger-Menü -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- Menü -->
+  <nav class="navbar">
+    <div class="logo">Pferdetraining</div>
+    <button class="menu-toggle">☰</button>
+    <div class="menu">
+     <a href="index.html">Home</a>
+      <a href="Delfin-Horsetraining.html">🐴🐬❤️</a>
+      <a href="ausbildungen.html">Meine Ausbildungen</a>
+      <a href="philosophie.html">Meine Philosophie</a>
+      <a href="angebote.html">Meine Angebote</a>
+      <a href="preise.html">Preise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
+
+
+  <section class="kontakt-section">
+    <h1>Kontakt</h1>
+
+    <div class="kontakt-block">
+      <div class="kontakt-text">
+        <p>
+          <strong>Telefon:</strong><br>
+          0664 / 4355391
+        </p>
+        <p>
+          <strong>Email:</strong><br>
+          <a href="mailto:pferdetraining.mgs@gmail.com">
+            pferdetraining.mgs@gmail.com
+          </a>
+        </p>
+        <p>
+          <a href="https://www.instagram.com/horses.mgs/">Instagram</a> <br>
+          <a href="https://www.facebook.com/profile.php?id=61586068182263"_blank">Facebook</a>
+        </p>
+      </div>
+      <img src="bilder/bild3.jpg" alt="Ich bei der Arbeit">
+    </div>
+  </section>
+
+  <!-- JavaScript für Hamburger-Menü -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
