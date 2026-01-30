@@ -829,3 +829,50 @@ body.seite-barock .grosses-bild img {
   height: auto !important;
   display: block;
 }
+
+/* ===== Untermenü einklappbar nur am Handy ===== */
+.submenu-wrapper {
+  margin: 20px;
+}
+
+/* Button standard: versteckt (Desktop) */
+.submenu-toggle {
+  display: none;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #f0e0d6;
+  color: #4b3b2b;
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Handy: Button sichtbar + Menü standardmäßig zu */
+@media (max-width: 768px) {
+  .submenu-toggle {
+    display: block;
+  }
+
+  /* Menü am Handy standardmäßig verstecken */
+  .submenu {
+    display: none;
+    margin-top: 10px;
+  }
+
+  /* wenn offen */
+  .submenu.open {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .submenu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(240, 224, 214, 0.75);
+  }
+}
