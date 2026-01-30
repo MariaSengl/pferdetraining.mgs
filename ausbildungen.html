@@ -25,7 +25,14 @@
 
 
   <!-- Untermenü nur für diese Seite -->
-  <nav class="submenu">
+<div class="submenu-wrapper">
+
+  <!-- Button erscheint nur am Handy -->
+  <button class="submenu-toggle" type="button" aria-expanded="false">
+    Inhalte anzeigen ▼
+  </button>
+
+  <nav class="submenu" id="submenu">
     <a href="#punkt1">Coachausbildung bei Delfin-Horsetraining</a>
     <a href="#punkt2">Ganzheitliche Online-Pferdeausbildung von Sandra Fencl</a>
     <a href="#punkt3">Online-Ausbildung in zirzensischer Gymnastik und vertrauensfördernder Bodenarbeit</a>
@@ -37,6 +44,9 @@
     <a href="#punkt9">Lernen von Wildpferden – Masterclass von Marc Lubetzki</a>
     <a href="#punkt10">Weitere wichtige Personen, von denen ich gelernt habe</a>
   </nav>
+
+</div>
+
 
   <section>
     <h1>Ausbildungen, Kurse und Seminare, die ich gemacht habe</h1>
@@ -198,6 +208,30 @@ In seiner 3-jährigen Masterclass teilt Marc Lubetzki seine Erkenntnisse, zeigt 
 </div>
 
   </section>
+
+<script>
+  const submenuToggle = document.querySelector('.submenu-toggle');
+  const submenu = document.querySelector('#submenu');
+
+  if (submenuToggle && submenu) {
+    submenuToggle.addEventListener('click', () => {
+      const isOpen = submenu.classList.toggle('open');
+      submenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      submenuToggle.textContent = isOpen ? 'Inhalte verbergen ▲' : 'Inhalte anzeigen ▼';
+    });
+
+    // Optional: nach Klick auf einen Punkt am Handy wieder einklappen
+    submenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          submenu.classList.remove('open');
+          submenuToggle.setAttribute('aria-expanded', 'false');
+          submenuToggle.textContent = 'Inhalte anzeigen ▼';
+        }
+      });
+    });
+  }
+</script>
 
 </body>
 </html>
