@@ -877,25 +877,37 @@ body.seite-barock .grosses-bild img {
   }
 }
 
-/* ===== Startbild am Handy: querformatiger Look ===== */
+/* ===== Startbild: Text kleiner & tiefer – NUR Handy ===== */
 @media (max-width: 768px) {
   .section-start {
-    padding: 0;                 /* wichtig: nimmt die riesige Höhe weg */
-    height: 240px;              /* fixe Höhe -> wirkt wie Querformat */
-    margin: 14px;
-    border-radius: 18px;
-
-    background-size: cover;
-    background-position: center 35%; /* zeigt mehr “oben”, aber bleibt breit */
+    height: 240px;              /* bleibt querformatig */
+    padding: 0;
+    position: relative;
   }
 
   .section-start h1 {
+    position: absolute;
+    bottom: 70px;               /* weiter nach unten */
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
-    padding-top: 60px;          /* Text nach unten, aber nicht riesig */
-    font-size: 2.2em;
+
+    font-size: 1.9em;           /* kleiner als jetzt */
+    line-height: 1.1;
+    text-align: center;
+    width: 90%;
   }
 
   .section-start p {
-    font-size: 1.05em;
+    position: absolute;
+    bottom: 40px;               /* noch weiter unten */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+
+    font-size: 0.95em;          /* deutlich kleiner */
+    text-align: center;
+    width: 90%;
   }
 }
+
