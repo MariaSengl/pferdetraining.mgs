@@ -911,3 +911,26 @@ body.seite-barock .grosses-bild img {
   }
 }
 
+/* Startbild: schräger Übergang nach unten */
+.section-start {
+  position: relative;   /* wichtig für das „Overlay“ */
+  overflow: hidden;     /* damit nichts über den Rand hinausragt */
+}
+
+/* schräger halbtransparenter Übergang */
+.section-start::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 120px;
+
+  background: rgba(240, 224, 214, 0.75); /* Farbe vom Textfeld, leicht transparent */
+  clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0% 100%);
+}
+@media (max-width: 768px) {
+  .section-start::after {
+    height: 90px;
+  }
+}
