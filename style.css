@@ -39,6 +39,11 @@ nav a:hover {
   margin: 20px 20px 0 20px;  /* unten = 0 */
 }
 
+/* Startseite: erster Textblock direkt am Startbild */
+.section-start + section {
+  margin-top: 0;
+}
+
 .section-start h1 {
   font-size: 4em; /* sehr große Überschrift */
   margin-top: 250px;   /* schiebt die Überschrift 250px nach unten */
