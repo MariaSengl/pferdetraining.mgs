@@ -931,7 +931,7 @@ body.seite-barock .grosses-bild img {
   right: 0;
   bottom: -1px;
 
-  height: 130px;
+  height: 150px;
 
   background: linear-gradient(
     to bottom,
@@ -945,6 +945,6 @@ body.seite-barock .grosses-bild img {
 /* 📱 Handy: deutlich niedriger */
 @media (max-width: 768px) {
   .section-start::after {
-    height: 45px;
+    height: 30px;
   }
 }
