@@ -997,3 +997,24 @@ body.seite-barock .grosses-bild img {
   margin-top: 0 !important;
   border-radius: 0 0 20px 20px !important;
 }
+
+/* 🔧 FIX: Hamburger-Menü IMMER klickbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.menu-toggle {
+  position: relative;
+  z-index: 10000;
+}
+
+/* Alles unter der Navbar darf sie NICHT überdecken */
+.section-start,
+.section-start::after,
+.header-streifen,
+.header-overlay {
+  z-index: 1;
+  pointer-events: auto;
+}
