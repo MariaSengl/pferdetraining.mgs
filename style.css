@@ -1018,3 +1018,25 @@ body.seite-barock .grosses-bild img {
   z-index: 1;
   pointer-events: auto;
 }
+
+/* ===== GLOBAL FIX: Hamburger-Menü immer klickbar (alle Seiten) ===== */
+.navbar{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999999 !important;
+}
+
+.navbar *{
+  pointer-events: auto !important;
+}
+
+.menu-toggle{
+  position: relative !important;
+  z-index: 1000000 !important;
+}
+
+/* Pseudo-Elemente/Overlays sollen niemals Klicks abfangen */
+*::before,
+*::after{
+  pointer-events: none !important;
+}
