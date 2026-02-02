@@ -971,3 +971,29 @@ body.seite-barock .grosses-bild img {
     margin: 0 14px 14px 14px;
   }
 }
+
+/* ===== STARTSEITE: Übergang & Ecken erzwingen (ganz am Ende lassen) ===== */
+
+/* Übergangshöhe Desktop */
+.section-start::after{
+  height: 120px !important;
+}
+
+/* Übergangshöhe Handy */
+@media (max-width: 768px){
+  .section-start::after{
+    height: 30px !important;   /* wenn du halb so hoch willst: 15px */
+  }
+}
+
+/* Ecken: Bild unten gerade, oben rund */
+.section-start{
+  border-radius: 20px 20px 0 0 !important;
+  margin: 20px 20px 0 20px !important;
+}
+
+/* Ecken: erster Textblock oben gerade */
+.section-start + section{
+  margin-top: 0 !important;
+  border-radius: 0 0 20px 20px !important;
+}
