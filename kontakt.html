@@ -48,15 +48,20 @@
     </div>
   </section>
 
-  <!-- JavaScript für Hamburger-Menü -->
-  <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".navbar .menu");
 
-    toggleButton.addEventListener('click', () => {
-      menu.classList.toggle('show');
+    if (!toggleButton || !menu) return;
+
+    toggleButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      menu.classList.toggle("show");
     });
-  </script>
+  });
+</script>
+
 
 </body>
 </html>
