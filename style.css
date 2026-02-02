@@ -1040,3 +1040,29 @@ body.seite-barock .grosses-bild img {
 *::after{
   pointer-events: none !important;
 }
+
+/* 📱 Startseite: Text-im-Bild auf Handy entschärfen */
+@media (max-width: 768px) {
+
+  .bild-mit-text {
+    max-width: 95%;
+  }
+
+  .bild-mit-text .bild-text {
+    font-size: 0.9rem;           /* kleinerer Text */
+    padding: 10px 14px;
+    max-width: 95%;              /* mehr Breite */
+    line-height: 1.4;
+
+    /* weniger "Block", mehr Leichtigkeit */
+    border-radius: 6px;
+  }
+}
+
+/* 📱 Extra klein (sehr schmale Handys) */
+@media (max-width: 480px) {
+  .bild-mit-text .bild-text {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
