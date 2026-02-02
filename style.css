@@ -36,7 +36,7 @@ nav a:hover {
   padding: 250px 20px; /* mehr Platz für große Überschrift */
   text-align: center;
   border-radius: 20px;
-  margin: 20px;
+  margin: 20px 20px 0 20px;  /* unten = 0 */
 }
 
 .section-start h1 {
