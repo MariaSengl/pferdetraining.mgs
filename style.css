@@ -1066,3 +1066,36 @@ body.seite-barock .grosses-bild img {
     padding: 8px 12px;
   }
 }
+
+/* 📱 FIX: Text im Bild auf Handy kleiner + breiter + weniger dominant */
+@media (max-width: 768px) {
+  .bild-mit-text .bild-text {
+    font-size: 0.85rem !important;
+    line-height: 1.35 !important;
+
+    /* mehr Breite, weniger Höhe */
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+
+    /* bessere Platzierung: unten, damit Bild sichtbar bleibt */
+    top: auto !important;
+    bottom: 10px !important;
+
+    left: 12px !important;
+    transform: none !important;
+
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+
+    /* optional: etwas transparenter, damit Bild durchscheint */
+    background: rgba(0,0,0,0.45) !important;
+  }
+}
+
+/* sehr kleine Handys */
+@media (max-width: 480px) {
+  .bild-mit-text .bild-text {
+    font-size: 0.8rem !important;
+    padding: 8px 10px !important;
+  }
+}
