@@ -916,36 +916,22 @@ body.seite-barock .grosses-bild img {
   }
 }
 
-/* Startbild: schräger Übergang nach unten */
+
+/* Startbild: schräger halbtransparenter Übergang (einheitlich) */
 .section-start {
-  position: relative;   /* wichtig für das „Overlay“ */
-  overflow: hidden;     /* damit nichts über den Rand hinausragt */
+  position: relative;
+  overflow: hidden;
 }
 
-/* schräger halbtransparenter Übergang */
+/* Desktop */
 .section-start::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 150px;
 
-  background: rgba(240, 224, 214, 0.75); /* Farbe vom Textfeld, leicht transparent */
-  clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0% 100%);
-}
-@media (max-width: 768px) {
-  .section-start::after {
-    height: 30px;
-  }
-}
-.section-start::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 120px;
+  height: 130px;
 
   background: linear-gradient(
     to bottom,
@@ -954,4 +940,11 @@ body.seite-barock .grosses-bild img {
   );
 
   clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* 📱 Handy: deutlich niedriger */
+@media (max-width: 768px) {
+  .section-start::after {
+    height: 45px;
+  }
 }
