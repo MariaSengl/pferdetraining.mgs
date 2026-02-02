@@ -929,14 +929,14 @@ body.seite-barock .grosses-bild img {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 130px;
+  height: 150px;
 
   background: rgba(240, 224, 214, 0.75); /* Farbe vom Textfeld, leicht transparent */
   clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0% 100%);
 }
 @media (max-width: 768px) {
   .section-start::after {
-    height: 45px;
+    height: 30px;
   }
 }
 .section-start::after {
