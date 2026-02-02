@@ -233,6 +233,15 @@ In seiner 3-jährigen Masterclass teilt Marc Lubetzki seine Erkenntnisse, zeigt 
   }
 </script>
 
+<script>
+  const toggleButton = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
 
