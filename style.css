@@ -1068,3 +1068,9 @@ body.seite-barock .grosses-bild img {
   }
 }
 
+@media (max-width: 480px) {
+  body.seite-start .bild-mit-text .bild-text {
+    font-size: 0.8rem;
+    bottom: 26px;   /* noch ein Tick höher */
+  }
+}
