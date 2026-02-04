@@ -1182,3 +1182,18 @@ body.seite-barock .grosses-bild img {
     padding: 0 !important;
   }
 }
+/* 📱 NUR Delfin-Horsetraining: genau dieses Zitat kleiner */
+@media (max-width: 768px) {
+
+  body.delfin-horsetraining section.zitat {
+    max-width: 90%;
+    margin: 25px auto;
+    padding: 18px 14px;
+  }
+
+  body.delfin-horsetraining section.zitat blockquote {
+    font-size: 0.95rem;     /* Schrift kleiner */
+    line-height: 1.45;
+    margin: 0;
+  }
+}
