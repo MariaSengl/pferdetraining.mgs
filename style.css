@@ -1109,3 +1109,27 @@ body.seite-barock .grosses-bild img {
     margin-top: 0 !important;
   }
 }
+/* 📱 Delfin-Horsetraining – Header als Streifen, ganzes Bild sichtbar */
+@media (max-width: 768px) {
+
+  body.delfin-horsetraining .section-header,
+  body.delfin-horsetraining .header-streifen {
+    height: 180px;                 /* Streifen statt Hochformat */
+    background-size: contain;      /* GANZES Bild sichtbar */
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  body.delfin-horsetraining .header-overlay {
+    padding: 20px 15px;
+  }
+
+  body.delfin-horsetraining .header-overlay h1 {
+    font-size: 1.6rem;             /* kleiner, aber präsent */
+    margin-bottom: 6px;
+  }
+
+  body.delfin-horsetraining .header-overlay p {
+    font-size: 1rem;
+  }
+}
