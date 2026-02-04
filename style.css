@@ -1175,3 +1175,10 @@ body.seite-barock .grosses-bild img {
     line-height: 1.2 !important;
   }
 }
+
+@media (max-width: 768px) {
+  body.delfin-horsetraining {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
