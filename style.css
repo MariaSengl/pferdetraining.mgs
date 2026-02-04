@@ -1054,7 +1054,7 @@ body.seite-barock .grosses-bild img {
     max-width: none;
 
     /* etwas höher setzen */
-    bottom: 22px;          /* vorher z. B. 10px */
+    bottom: 30px;          /* vorher z. B. 10px */
     top: auto;
 
     left: 50%;
