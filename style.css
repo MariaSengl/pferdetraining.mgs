@@ -1133,3 +1133,45 @@ body.seite-barock .grosses-bild img {
     font-size: 1rem;
   }
 }
+/* 📱 NUR Delfin-Horsetraining: Header full width + Text im Bild */
+@media (max-width: 768px) {
+  body.delfin-horsetraining .section-header,
+  body.delfin-horsetraining .header-streifen {
+    width: 100vw !important;           /* volle Bildschirmbreite */
+    margin: 0 !important;              /* kein Rand */
+    border-radius: 0 !important;       /* keine Rundung */
+    height: 170px !important;          /* Streifen-Höhe */
+    padding: 0 !important;
+
+    background-size: cover !important; /* füllt Fläche, Text bleibt im Bild */
+    background-position: center 30% !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Overlay/Text wieder INS Bild zwingen */
+  body.delfin-horsetraining .header-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 12px 14px !important;
+    background: rgba(0,0,0,0.35) !important; /* Lesbarkeit */
+  }
+
+  body.delfin-horsetraining .header-overlay h1 {
+    font-size: 1.35rem !important;   /* kleiner */
+    margin: 0 0 6px 0 !important;
+    color: #fff !important;
+    line-height: 1.1 !important;
+  }
+
+  body.delfin-horsetraining .header-overlay p {
+    font-size: 0.95rem !important;   /* kleiner */
+    margin: 0 !important;
+    color: #fff !important;
+    line-height: 1.2 !important;
+  }
+}
