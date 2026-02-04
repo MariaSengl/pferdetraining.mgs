@@ -1197,3 +1197,26 @@ body.seite-barock .grosses-bild img {
     margin: 0;
   }
 }
+@media (max-width: 768px) {
+
+  body.delfin-horsetraining .header-streifen,
+  body.delfin-horsetraining .section-header {
+    margin-top: 0 !important;
+    border-radius: 0 !important;   /* keine Rundung */
+  }
+
+}
+@media (max-width: 768px) {
+
+  body.delfin-horsetraining .header-overlay h1 {
+    font-size: 1.4rem;     /* deutlich kleiner */
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  body.delfin-horsetraining .header-overlay p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+}
