@@ -1162,15 +1162,15 @@ body.seite-barock .grosses-bild img {
   }
 
   body.delfin-horsetraining .header-overlay h1 {
-    font-size: 1.35rem !important;   /* kleiner */
+    font-size: 1rem !important;   /* kleiner */
     margin: 0 0 6px 0 !important;
     color: #fff !important;
     line-height: 1.1 !important;
   }
 
   body.delfin-horsetraining .header-overlay p {
-    font-size: 0.95rem !important;   /* kleiner */
-    margin: 0 !important;
+    font-size: 0.85rem !important;   /* kleiner */
+    margin: 1 !important;
     color: #fff !important;
     line-height: 1.2 !important;
   }
