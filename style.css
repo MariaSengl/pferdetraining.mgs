@@ -1074,3 +1074,19 @@ body.seite-barock .grosses-bild img {
     bottom: 26px;   /* noch ein Tick höher */
   }
 }
+
+/* 📱 Startbild am Handy: direkt unter Menü, volle Breite */
+@media (max-width: 768px) {
+
+  /* Menü ohne Abstand nach unten */
+  .navbar {
+    margin-bottom: 0 !important;
+  }
+
+  /* Startbild ohne Außenabstand & volle Breite */
+  .section-start {
+    margin: 0 !important;        /* kein Abstand außen */
+    border-radius: 0 !important; /* keine Rundung -> wirkt wie "anschließend" */
+    width: 100% !important;
+  }
+}
