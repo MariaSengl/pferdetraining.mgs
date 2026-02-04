@@ -1090,3 +1090,11 @@ body.seite-barock .grosses-bild img {
     width: 100% !important;
   }
 }
+
+/* 📱 Startseite: Startbild unten wieder rund (inkl. Übergang) */
+@media (max-width: 768px) {
+  .section-start {
+    border-radius: 0 0 18px 18px !important; /* nur unten rund */
+    overflow: hidden !important;            /* wichtig: Übergang wird mit abgerundet */
+  }
+}
