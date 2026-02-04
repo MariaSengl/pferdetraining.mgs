@@ -1098,3 +1098,14 @@ body.seite-barock .grosses-bild img {
     overflow: hidden !important;            /* wichtig: Übergang wird mit abgerundet */
   }
 }
+
+/* 📱 Startseite: Text beginnt weiter oben im Textblock */
+@media (max-width: 768px) {
+  .start-text {
+    padding-top: 18px !important;
+  }
+
+  .start-text p:first-child {
+    margin-top: 0 !important;
+  }
+}
