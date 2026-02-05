@@ -1955,3 +1955,24 @@ body.seite-preise .preise-mobile-bild {
     margin: 0 !important;
   }
 }
+/* Ausbildungen: Submenu Toggle wie Textfeld einfärben */
+.submenu-toggle {
+  background: #f0e0d6 !important;
+  color: #4b3b2b !important;
+  border: 1px solid rgba(75, 59, 43, 0.25);
+}
+.submenu-toggle:hover {
+  filter: brightness(0.97);
+}
+/* Desktop: Philosophie Header direkt ans Menüband */
+@media (min-width: 769px) {
+  body.seite-barock section.header-streifen {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+@media (min-width: 769px) {
+  body.seite-barock section.zentrierter-text:first-of-type {
+    margin-top: 20px;
+  }
+}
