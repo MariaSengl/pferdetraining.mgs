@@ -1896,3 +1896,11 @@ body.seite-preise .preise-mobile-bild {
     border-radius: 15px !important;
   }
 }
+@media (max-width: 768px) {
+
+  /* Hauptsäulen-Block abrunden */
+  body.delfin-horsetraining section.hauptsaeulen {
+    border-radius: 20px !important;
+  }
+
+}
