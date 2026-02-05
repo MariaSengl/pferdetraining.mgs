@@ -1913,3 +1913,12 @@ body.seite-preise .preise-mobile-bild {
   }
 
 }
+@media (max-width: 768px) {
+
+  /* Preise-Seite: Überschriften linksbündig auf Handy */
+  .preise-content h1,
+  .preise-content h2 {
+    text-align: left !important;
+  }
+
+}
