@@ -1950,3 +1950,8 @@ body.seite-preise .preise-mobile-bild {
     margin-top: 0 !important;
   }
 }
+@media (min-width: 769px) {
+  body.seite-barock section.header-streifen {
+    margin: 0 !important;
+  }
+}
