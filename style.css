@@ -1867,3 +1867,32 @@ body.seite-preise .preise-mobile-bild {
     word-break: break-word !important;
   }
 }
+/* ===== Delfin-Horsetraining: Rundungen am Handy wieder aktivieren ===== */
+@media (max-width: 768px) {
+
+  /* Header bleibt eckig */
+  body.delfin-horsetraining .section-header {
+    border-radius: 0 !important;
+  }
+
+  /* Zitat */
+  body.delfin-horsetraining section.zitat {
+    border-radius: 20px !important;
+  }
+
+  /* Highlight-Text */
+  body.delfin-horsetraining section.highlight-text {
+    border-radius: 20px !important;
+  }
+
+  /* Text-Bild-Blöcke */
+  body.delfin-horsetraining .text-bild-block {
+    border-radius: 20px !important;
+    padding-top: 30px; /* oberen Rand wieder etwas ruhiger machen */
+  }
+
+  /* Bilder in Text-Bild-Blöcken */
+  body.delfin-horsetraining .text-bild-block img {
+    border-radius: 15px !important;
+  }
+}
