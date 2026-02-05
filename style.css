@@ -1452,3 +1452,17 @@ body.seite-barock .grosses-bild img {
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+  body.seite-preise .preise-mobile-bild {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 14px auto 18px auto;
+    border-radius: 14px;
+  }
+
+  /* Desktop-Bild rechts am Handy ausblenden */
+  body.seite-preise .preise-bild {
+    display: none !important;
+  }
+}
