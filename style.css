@@ -1725,3 +1725,85 @@ body.seite-preise .preise-mobile-bild {
     width: 100% !important;
   }
 }
+/* =========================================
+   HANDY: globale Section-Ränder neutralisieren
+   für ausgewählte Seiten
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Delfin-Horsetraining */
+  body.delfin-horsetraining section {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  /* Philosophie */
+  body.seite-barock section {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+}
+@media (max-width: 768px) {
+
+  body.delfin-horsetraining .section-header {
+    height: 160px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  body.delfin-horsetraining .section-header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  body.delfin-horsetraining .section-header p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+}
+@media (max-width: 768px) {
+
+  body.seite-barock .header-streifen {
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  body.seite-barock .header-overlay h1 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  body.seite-barock .header-overlay p {
+    font-size: 0.9rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  body.seite-barock .wechsel-abschnitt {
+    padding: 0 16px;
+  }
+
+  body.seite-barock .wechsel-block {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  body.seite-barock .wechsel-block img {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+}
