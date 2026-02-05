@@ -1922,3 +1922,25 @@ body.seite-preise .preise-mobile-bild {
   }
 
 }
+/* Untermenü einklappbar (Desktop + Handy) */
+.submenu {
+  display: none;
+}
+
+.submenu.show {
+  display: flex;              /* bei dir sind Links untereinander */
+  flex-direction: column;
+  gap: 8px;
+}
+
+.submenu-toggle {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #8b6d5c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
