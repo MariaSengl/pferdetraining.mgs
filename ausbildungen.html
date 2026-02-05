@@ -251,6 +251,18 @@ In seiner 3-jährigen Masterclass teilt Marc Lubetzki seine Erkenntnisse, zeigt 
   });
 </script>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".submenu-toggle");
+    const submenu = document.querySelector(".submenu");
+    if (!btn || !submenu) return;
+
+    btn.addEventListener("click", () => {
+      submenu.classList.toggle("show");
+    });
+  });
+</script>
+
 </body>
 </html>
 
