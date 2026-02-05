@@ -1807,3 +1807,63 @@ body.seite-preise .preise-mobile-bild {
   }
 
 }
+/* ===== FIX nur Handy: Delfin + Philosophie Header auf echte Handybreite ===== */
+@media (max-width: 768px) {
+
+  /* Seitliches Scrollen nur auf diesen Seiten verhindern */
+  body.delfin-horsetraining,
+  body.seite-barock {
+    overflow-x: hidden !important;
+  }
+
+  /* --- Delfin: section-header ist ein <section> und erbt margin:20px -> raus damit --- */
+  body.delfin-horsetraining section.section-header {
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+
+    /* volle Breite ohne "100vw"-Bug */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Text im Delfin-Header wieder mit seitlichem Innenabstand */
+  body.delfin-horsetraining section.section-header > * {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  /* --- Philosophie: header-streifen ebenfalls volle Breite --- */
+  body.seite-barock section.header-streifen {
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --- Philosophie: wechsel-abschnitt darf NICHT breiter als Handy sein --- */
+  body.seite-barock section.wechsel-abschnitt {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* sehr häufige Overflow-Quelle: lange Wörter/Links */
+  body.seite-barock section.wechsel-abschnitt * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+}
