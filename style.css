@@ -1944,3 +1944,9 @@ body.seite-preise .preise-mobile-bild {
   font-weight: bold;
   cursor: pointer;
 }
+/* Desktop: Philosophie Header direkt ans Menüband */
+@media (min-width: 769px) {
+  body.seite-barock .header-streifen {
+    margin-top: 0 !important;
+  }
+}
