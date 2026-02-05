@@ -1432,3 +1432,23 @@ body.seite-barock .grosses-bild img {
     border-radius: 14px !important;
   }
 }
+
+/* Angebote: Mobile-Bilder nur am Handy anzeigen */
+.mobile-only { display: none; }
+
+@media (max-width: 768px) {
+  body.seite-angebote .mobile-only { 
+    display: block; 
+    width: 100%;
+    max-width: 520px;
+    margin: 16px auto 10px auto;
+    border-radius: 14px;
+  }
+
+  /* Desktop-Bildspalte am Handy ausblenden */
+  body.seite-angebote .angebote-bild,
+  body.seite-angebote .angebote-bilder-untereinander,
+  body.seite-angebote .angebote-bilder {
+    display: none !important;
+  }
+}
