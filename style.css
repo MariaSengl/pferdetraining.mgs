@@ -1466,3 +1466,22 @@ body.seite-barock .grosses-bild img {
     display: none !important;
   }
 }
+/* Preise: Mobile-Bild standardmäßig verstecken (Desktop) */
+body.seite-preise .preise-mobile-bild {
+  display: none !important;
+}
+
+/* Preise: am Handy Mobile-Bild zeigen + Desktop-Bild ausblenden */
+@media (max-width: 768px) {
+  body.seite-preise .preise-mobile-bild {
+    display: block !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 14px auto 18px auto !important;
+    border-radius: 14px !important;
+  }
+
+  body.seite-preise .preise-bild {
+    display: none !important;
+  }
+}
