@@ -1485,3 +1485,122 @@ body.seite-preise .preise-mobile-bild {
     display: none !important;
   }
 }
+/* =========================================================
+   MOBILE FIXES – Delfin-Horsetraining + Philosophie (nur Handy)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* =========================
+     Delfin-Horsetraining
+     ========================= */
+
+  /* verhindert horizontales Scrollen auf dieser Seite */
+  body.delfin-horsetraining {
+    overflow-x: hidden !important;
+  }
+
+  /* Header: NICHT 100vw (macht oft Scroll), sondern 100% */
+  body.delfin-horsetraining .section-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    height: 160px !important;          /* bleibt so hoch wie jetzt */
+    padding: 0 14px !important;
+
+    background-size: cover !important;
+    background-position: center 30% !important;
+  }
+
+  /* Highlight-Text: kleiner, schmaler, weniger wuchtig */
+  body.delfin-horsetraining .highlight-text {
+    max-width: 88% !important;         /* Rand links/rechts sichtbar */
+    padding: 18px 14px !important;     /* etwas kompakter */
+    margin: 18px auto !important;
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Text-Bild-Blocks: Bild über h2, mehr "Rahmen" oben */
+  body.delfin-horsetraining .text-bild-block {
+    flex-direction: column !important;
+    text-align: left !important;
+
+    max-width: 92% !important;
+    margin: 26px auto !important;
+    padding: 18px 14px !important;     /* oben wieder mehr Abstand */
+  }
+
+  body.delfin-horsetraining .text-bild-block img {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 auto 12px auto !important;
+  }
+
+  body.delfin-horsetraining .text-bild-block div {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  body.delfin-horsetraining .text-bild-block h2 {
+    margin-top: 0 !important;          /* kein „klebt am Rand“ */
+  }
+
+
+  /* =========================
+     Philosophie (seite-barock)
+     ========================= */
+
+  body.seite-barock {
+    overflow-x: hidden !important;
+  }
+
+  /* Header: Breite sauber auf Handy, etwas weniger hoch */
+  body.seite-barock .header-streifen {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    height: 140px !important;          /* etwas weniger hoch */
+    background-size: cover !important;
+    background-position: center 30% !important;
+  }
+
+  /* Abstand nach Header kleiner */
+  body.seite-barock .header-streifen + .zentrierter-text {
+    margin-top: 20px !important;       /* vorher sehr groß */
+  }
+
+  /* Wechsel-Abschnitt: Breite sicher passend + kein Seitenscroll */
+  body.seite-barock .wechsel-abschnitt {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 14px !important;
+    margin: 40px auto !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Überschrift und Text dürfen umbrechen */
+  body.seite-barock .wechsel-abschnitt h2,
+  body.seite-barock .wechsel-abschnitt p {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  /* Wechsel-Blöcke: Bild zuerst, dann Text */
+  body.seite-barock .wechsel-block {
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 14px !important;
+  }
+
+  body.seite-barock .wechsel-block img {
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+  }
+}
